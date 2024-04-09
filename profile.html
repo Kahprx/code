@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ cá nhân</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hồ sơ cá nhân</h1>
+    </header>
+    <main>
+        <div class="user-info">
+            <p><strong>Họ và tên:</strong> <span id="fullName">Nguyễn Văn A</span></p>
+            <p><strong>Email:</strong> <span id="email">example@example.com</span></p>
+            <p><strong>MSSV:</strong> <span id="mssv">123456</span></p>
+            <p><strong>Số điện thoại:</strong> <span id="phoneNumber">123-456-7890</span></p>
+            <p><strong>Địa chỉ:</strong> <span id="address">123 Đường ABC, Quận XYZ, Thành phố HCM</span></p>
+        </div>
+        <button onclick="editProfile()">Chỉnh sửa hồ sơ</button>
+        <button onclick="goToMainPage()">Quay lại trang chính</button>
+    </main>
+
+    <script>
+        // Giả sử thông tin người dùng được lưu trong localStorage
+        var user = {
+            fullName: "Nguyễn Văn A",
+            email: "example@example.com",
+            mssv: "123456",
+            phoneNumber: "123-456-7890",
+            address: "123 Đường ABC, Quận XYZ, Thành phố HCM"
+        };
+
+        // Hiển thị thông tin người dùng
+        document.getElementById("fullName").textContent = user.fullName;
+        document.getElementById("email").textContent = user.email;
+        document.getElementById("mssv").textContent = user.mssv;
+        document.getElementById("phoneNumber").textContent = user.phoneNumber;
+        document.getElementById("address").textContent = user.address;
+
+        function editProfile() {
+            // Chuyển hướng đến trang chỉnh sửa hồ sơ cá nhân
+            window.location.href = "edit_profile.html";
+        }
+
+        function goToMainPage() {
+            // Chuyển hướng đến trang chính
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
