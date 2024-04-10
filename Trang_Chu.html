@@ -11,13 +11,17 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        header {
+        header, footer {
             background-color: #007bff;
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
+            flex-shrink: 0;
         }
 
         h1 {
@@ -29,6 +33,7 @@
             margin: 20px auto;
             padding: 0 20px;
             text-align: center;
+            flex-grow: 1;
         }
 
         .welcome-message {
@@ -62,10 +67,18 @@
             border-radius: 5px;
             background-color: #ffffff;
             transition: background-color 0.3s;
+            animation: jump 0.5s ease;
         }
 
         .navigation li a:hover {
-            background-color: #e9ecef;
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        @keyframes jump {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
         }
 
         footer {
@@ -73,29 +86,30 @@
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
+            flex-shrink: 0;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Trang chính</h1>
+        <h1> HỆ THỐNG TIỀN TỐT NGHIỆP</h1>
     </header>
 
     <main>
         <div class="welcome-message">
-            <h2>Xin chào, [Tên sinh viên]!</h2>
+            <h2>Xin chào, Nguyễn Văn A!</h2>
             <p>Chào mừng bạn đến với hệ thống tiền tốt nghiệp.</p>
         </div>
 
         <ul class="navigation">
             <li><a href="profile.html">Hồ sơ cá nhân</a></li>
             <li><a href="courses.html">Quản lý khóa học</a></li>
-            <li><a href="resources.html">Tài nguyên và Hỗ trợ</a></li>
             <li><a href="notifications.html">Thông báo</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="terms.html">Điều khoản và Điều kiện</a></li>
-            <li><a href="logout.php">Đăng xuất</a></li>
-        </ul>
+            <li><a href="loginForm.html">Đăng xuất</a></li>
+        </ul>   
         
     </main>
 

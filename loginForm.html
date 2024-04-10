@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Đại học Công nghệ TP.HCM (HUTECH)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333333;
+            margin-top: 0;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form button:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot-password-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .forgot-password-link a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .forgot-password-link a:hover {
+            color: #0056b3;
+        }
+
+        #errorMessage {
+            display: none;
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng nhập - Đại học Công nghệ TP.HCM (HUTECH)</h2>
+        <form class="form" id="loginForm">
+            <input type="text" name="mssv" placeholder="Tên Đăng Nhập" required>
+            <input type="password" name="password" placeholder="Mật khẩu" required>
+            <button type="button" id="loginButton">Đăng nhập</button>
+            <p class="forgot-password-link"><a href="forgot_password.html">Quên mật khẩu?</a></p>
+        </form>
+        <p id="errorMessage"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("loginButton").addEventListener("click", function() {
+                var formData = new FormData(document.getElementById("loginForm"));
+                var errorMessage = document.getElementById("errorMessage");
+                errorMessage.style.display = "none";
+        
+                fetch("login.php", {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+            
+                        window.location.href = "Trang_Chu.html";
+                    
+                })
+                .catch(error => {
+                    errorMessage.style.display = "block";
+                    errorMessage.textContent = "Lỗi kết nối: " + error;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
