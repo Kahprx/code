@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu hỏi Thường gặp - Hệ thống Theo dõi Tốt Nghiệp</title>
+    <link rel="stylesheet" href="stylepro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+    <style>
+        /* Thêm CSS tùy chỉnh nếu cần */
+    </style>
+</head>
+<body>
+    <nav class="dashboard-menu">
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> Hồ sơ cá nhân</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> Quản lý khóa học</a></li>
+            <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li><a href="terms.html"><i class="fas fa-file-alt"></i> Điều khoản và điều kiện</a></li>
+            <li><a href="loginForm.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Câu hỏi Thường gặp - Hệ thống Tiền Tốt Nghiệp</h1>
+        </header>
+        
+        <section id="faq">
+            <h2>Câu hỏi Thường gặp</h2>
+
+            <div class="faq-category">
+                <h3>Thông tin cơ bản</h3>
+
+                <div class="faq-item">
+                    <div class="question" onclick="toggleAnswer(this)">Mục đích của Hệ thống Theo dõi Tốt Nghiệp là gì?</div>
+                    <div class="answer">
+                        <p>Hệ thống Theo dõi Tốt Nghiệp giúp sinh viên theo dõi tiến trình học tập của mình đến việc tốt nghiệp, bao gồm các yêu cầu đã hoàn thành và còn lại.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question" onclick="toggleAnswer(this)">Làm thế nào để truy cập Hệ thống Theo dõi Tốt Nghiệp?</div>
+                    <div class="answer">
+                        <p>Bạn có thể truy cập Hệ thống Theo dõi Tốt Nghiệp bằng cách đăng nhập vào cổng thông tin sinh viên trên trang web của trường và điều hướng đến phần theo dõi tốt nghiệp.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h3>Cập nhật tiến trình</h3>
+
+                <div class="faq-item">
+                    <div class="question" onclick="toggleAnswer(this)">Tôi có thể cập nhật tiến trình của mình bằng cách thủ công không?</div>
+                    <div class="answer">
+                        <p>Có, bạn có thể cập nhật tiến trình của mình trong Hệ thống Theo dõi Tốt Nghiệp bằng cách cung cấp thông tin liên quan hoặc tải lên tài liệu làm bằng chứng cho việc hoàn thành.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Hệ thống Theo dõi Tốt Nghiệp</p>
+        </footer>
+        <script>
+            function toggleAnswer(question) {
+                var answer = question.nextElementSibling;
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>

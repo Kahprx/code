@@ -4,114 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hồ sơ cá nhân</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-
-        header {
-            background-color: #007bff;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        main {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .user-info {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .user-info p {
-            margin-bottom: 10px;
-        }
-
-        .user-info strong {
-            font-weight: bold;
-        }
-
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            margin-bottom: 10px;
-        }
-
-        button:last-child {
-            margin-bottom: 0;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="stylepro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
-    <header>
-        <h1>Hồ sơ cá nhân</h1>
-    </header>
-    <main>
-        <div class="user-info">
-            <p><strong>Họ và tên:</strong> <span id="fullName">Nguyễn Văn A</span></p>
-            <p><strong>Email:</strong> <span id="email">example@example.com</span></p>
-            <p><strong>MSSV:</strong> <span id="mssv">2180602394</span></p>
-            <p><strong>Số điện thoại:</strong> <span id="phoneNumber">123-456-7890</span></p>
-            <p><strong>Địa chỉ:</strong> <span id="address">123 Đường ABC, Quận XYZ, Thành phố HCM</span></p>
+    <nav class="dashboard-menu">
+        <div class="container">
+            <ul>
+                <ul>
+                    <li><a href="Trang_Chu.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Hồ sơ cá nhân</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Quản lý khóa học</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Điều khoản và điều kiện</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                </ul>
+            </ul>
         </div>
-        <button onclick="editProfile()">Chỉnh sửa hồ sơ</button>
-        <button onclick="goToMainPage()">Quay lại trang chính</button>
+    </nav>
+
+    
+
+    <main>
+        <header>
+            <div class="container">
+                <h1>Hồ sơ cá nhân</h1>
+            </div>
+        </header>
+        <div class="container">
+            <section class="profile-info">
+                <h2>Thông tin cá nhân</h2>
+                <div class="profile-details">
+                    <p><strong>Họ và tên:</strong> Nguyễn Văn A</p>
+                    <p><strong>Email:</strong> example@example.com</p>
+                    <p><strong>MSSV:</strong> 2180602394</p>
+                    <p><strong>Số điện thoại:</strong> 123-456-7890</p>
+                    <p><strong>Địa chỉ:</strong> 123 Đường ABC, Quận XYZ, Thành phố HCM</p>
+                </div>
+                <div class="profile-buttons">
+                    <button class="edit-profile-btn">Chỉnh sửa hồ sơ</button>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Hệ thống tiền tốt nghiệp</p>
+            </div>
+        </footer>
     </main>
 
-    <script>
-        // Giả sử thông tin người dùng được lưu trong localStorage
-        var user = {
-            fullName: "Nguyễn Văn A",
-            email: "example@example.com",
-            mssv: "123456",
-            phoneNumber: "123-456-7890",
-            address: "123 Đường ABC, Quận XYZ, Thành phố HCM"
-        };
 
-        // Hiển thị thông tin người dùng
-        document.getElementById("fullName").textContent = user.fullName;
-        document.getElementById("email").textContent = user.email;
-        document.getElementById("mssv").textContent = user.mssv;
-        document.getElementById("phoneNumber").textContent = user.phoneNumber;
-        document.getElementById("address").textContent = user.address;
-
-        function editProfile() {
-            // Chuyển hướng đến trang chỉnh sửa hồ sơ cá nhân
-            window.location.href = "edit_profile.html";
-        }
-
-        function goToMainPage() {
-            // Chuyển hướng đến trang chính
-            window.location.href = "Trang_Chu.html";
-        }
-    </script>
 </body>
 </html>

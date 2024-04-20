@@ -3,118 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chính</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header, footer {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        .welcome-message {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .welcome-message h2 {
-            color: #007bff;
-            margin-top: 0;
-        }
-
-        .navigation {
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-
-        .navigation li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        .navigation li a {
-            color: #007bff;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #ffffff;
-            transition: background-color 0.3s;
-            animation: jump 0.5s ease;
-        }
-
-        .navigation li a:hover {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        @keyframes jump {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0); }
-        }
-
-        footer {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            flex-shrink: 0;
-            margin-top: auto;
-        }
-    </style>
+    <title>Trang chủ - Hệ thống tiền tốt nghiệp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
 </head>
+
 <body>
-    <header>
-        <h1> HỆ THỐNG TIỀN TỐT NGHIỆP</h1>
-    </header>
+    <nav class="dashboard-menu">
+        <ul>
+            <li><a href="Trang_Chu.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> Hồ sơ cá nhân</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> Quản lý khóa học</a></li>
+            <li><a href="faq.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li><a href="terms.html"><i class="fas fa-file-alt"></i> Điều khoản và điều kiện</a></li>
+            <li><a href="#" onclick="confirmLogout()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+            
+        </ul>
+    </nav>
 
     <main>
-        <div class="welcome-message">
-            <h2>Xin chào, Nguyễn Văn A!</h2>
-            <p>Chào mừng bạn đến với hệ thống tiền tốt nghiệp.</p>
-        </div>
+        <header>
+            <h1>Hệ thống tiền tốt nghiệp</h1>
+        </header>
+        <section class="welcome">
+            <div class="container">
+                <h2>Xin chào, Nguyễn Văn A!</h2>
+                <p>Chào mừng bạn đến với hệ thống tiền tốt nghiệp.</p>
+            </div>
+        </section>
 
-        <ul class="navigation">
-            <li><a href="profile.html">Hồ sơ cá nhân</a></li>
-            <li><a href="courses.html">Quản lý khóa học</a></li>
-            <li><a href="notifications.html">Thông báo</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="terms.html">Điều khoản và Điều kiện</a></li>
-            <li><a href="loginForm.html">Đăng xuất</a></li>
-        </ul>   
-        
+        <section class="features">
+            <div class="container">
+                <h2>Tính năng</h2>
+                <p>Danh sách các tính năng của hệ thống tiền tốt nghiệp.</p>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Hệ thống tiền tốt nghiệp</p>
+            </div>
+        </footer>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Hệ thống tiền tốt nghiệp</p>
-    </footer>
+    
+    <script>
+        function confirmLogout() {
+            var confirmLogout = confirm("Bạn có chắc chắn muốn đăng xuất?");
+            if (confirmLogout) {
+                window.location.href = "loginForm.html";
+            }
+        }
+    </script>
+    
 </body>
 </html>
